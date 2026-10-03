@@ -1,5 +1,12 @@
 export type HouseId = "gryffindor" | "slytherin" | "ravenclaw" | "hufflepuff";
 
+export const houseCrestSrc: Record<HouseId, string> = {
+  gryffindor: "/images/crests/gryffindor.png",
+  slytherin: "/images/crests/slytherin-reference.png",
+  ravenclaw: "/images/crests/ravenclaw-reference.png",
+  hufflepuff: "/images/crests/hufflepuff-reference.png",
+};
+
 export interface House {
   id: HouseId;
   name: string;

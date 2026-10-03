@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: "An unofficial interactive Hogwarts-inspired frontend experience built with Next.js, TypeScript and modern web animation.",
   openGraph: { title: "Hogwarts | A Magical Interactive Experience", description: "An unofficial fan-made invitation to explore the castle.", type: "website" },
   robots: { index: true, follow: true },
+  icons: { icon: "/images/crests/hogwarts.png", apple: "/images/crests/hogwarts.png" },
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#080d1a" };
 

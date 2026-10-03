@@ -40,3 +40,73 @@
 .eyebrow.dark,.explore-page-content .eyebrow,.spell-card-top{color:#6e5024}.spell-results,.spell-search input::placeholder{color:#5c564b}.house-gryffindor{--house-accent:#cf9781}
 
 .spell-categories button,.map-marker{min-height:44px}.map-marker{display:inline-flex;align-items:center;justify-content:center}
+
+/* Heraldry and candlelit atmosphere */
+.brand-mark,.brand-mark-small{width:42px;height:49px;border:0;clip-path:none;filter:drop-shadow(0 0 8px rgba(243,213,139,.18));transition:filter .3s,transform .3s}.brand-mark:before{display:none}.brand-mark img{width:100%;height:100%;object-fit:contain}.brand:hover .brand-mark{filter:drop-shadow(0 0 13px rgba(243,213,139,.65));transform:scale(1.06)}.brand-mark-small{width:35px;height:42px}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 67% 43%,rgba(228,177,78,.1),transparent 33%),linear-gradient(105deg,transparent 44%,rgba(245,216,152,.035) 51%,transparent 59%);mix-blend-mode:screen;z-index:1}.hero-stars{animation:star-shimmer 7s ease-in-out infinite alternate}.hero-motes{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}.hero-motes i{position:absolute;display:block;width:3px;height:3px;border-radius:50%;background:#ffdc8b;box-shadow:0 0 10px 4px rgba(237,193,106,.38),0 0 25px 9px rgba(237,193,106,.1);opacity:.75;animation:mote-rise 9s ease-in-out infinite alternate}.hero-motes i:nth-child(1){left:8%;top:68%;animation-delay:-2s}.hero-motes i:nth-child(2){left:20%;top:20%;animation-delay:-5s}.hero-motes i:nth-child(3){left:31%;top:80%;animation-delay:-3s}.hero-motes i:nth-child(4){left:41%;top:29%;animation-delay:-8s}.hero-motes i:nth-child(5){left:54%;top:61%;animation-delay:-4s}.hero-motes i:nth-child(6){left:62%;top:16%;animation-delay:-7s}.hero-motes i:nth-child(7){left:73%;top:77%;animation-delay:-1s}.hero-motes i:nth-child(8){left:80%;top:35%;animation-delay:-6s}.hero-motes i:nth-child(9){left:91%;top:63%;animation-delay:-3.5s}.hero-motes i:nth-child(10){left:97%;top:20%;animation-delay:-8.5s}.hero-motes i:nth-child(11){left:47%;top:89%;animation-delay:-1.5s}.hero-motes i:nth-child(12){left:85%;top:88%;animation-delay:-5.5s}@keyframes mote-rise{0%{transform:translate3d(0,16px,0) scale(.6);opacity:.15}50%{opacity:.85}100%{transform:translate3d(14px,-26px,0) scale(1.25);opacity:.2}}@keyframes star-shimmer{to{opacity:.48}}
+.house-card{isolation:isolate;background:linear-gradient(180deg,rgba(9,14,26,.12),rgba(9,14,26,.96)),radial-gradient(circle at 50% 37%,var(--house-glow),transparent 62%),#182130}.house-card:after{content:"";position:absolute;z-index:0;left:50%;top:23%;width:215px;height:215px;border:1px solid rgba(243,213,139,.13);border-radius:50%;transform:translateX(-50%);box-shadow:0 0 0 22px rgba(243,213,139,.025),0 0 55px var(--house-glow);pointer-events:none;transition:box-shadow .4s,transform .4s}.house-card:hover:after,.house-card:focus-visible:after{transform:translateX(-50%) scale(1.08);box-shadow:0 0 0 24px rgba(243,213,139,.035),0 0 75px var(--house-glow)}.house-emblem{width:min(90%,200px);height:230px;border:0;clip-path:none;gap:0;filter:drop-shadow(0 12px 18px rgba(0,0,0,.4))}.house-emblem img{width:100%;height:100%;object-fit:contain}.house-card:hover .house-emblem,.house-card:focus-visible .house-emblem{transform:translateY(-7px) scale(1.04)}.house-card-body{position:relative;z-index:1}
+.house-detail-hero{position:relative;overflow:hidden;background:radial-gradient(circle at 77% 48%,var(--house-glow),transparent 40%),radial-gradient(circle at 20% 95%,rgba(199,163,90,.07),transparent 46%),#0b1321}.house-detail-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(243,213,139,.48) 1px,transparent 2px);background-size:113px 137px;opacity:.12;mask-image:linear-gradient(90deg,transparent 30%,#000)}.house-detail-hero .container{position:relative}.detail-emblem{width:250px;height:300px;border:0;clip-path:none;filter:drop-shadow(0 0 35px var(--house-glow)) drop-shadow(0 20px 24px rgba(0,0,0,.4))}.detail-emblem img{width:100%;height:100%;object-fit:contain;animation:crest-breathe 7s ease-in-out infinite alternate}@keyframes crest-breathe{to{transform:translateY(-8px) scale(1.025)}}
+.result-icon{width:160px;height:190px;border:0;clip-path:none;filter:drop-shadow(0 0 22px var(--house-glow))}.result-icon img{width:100%;height:100%;object-fit:contain}.sorting-result:before{opacity:.75}
+.quote-section:before{content:"";position:absolute;inset:0;background:url('/images/crests/hogwarts.png') center/280px auto no-repeat;opacity:.045;pointer-events:none}.quote-stars{animation:star-shimmer 7s ease-in-out infinite alternate-reverse}
+@media(max-width:1100px){.house-emblem{height:195px}.house-card:after{top:19%;width:185px;height:185px}}
+@media(max-width:800px){.detail-emblem{width:190px;height:225px}.hero-motes i:nth-child(n+9){display:none}}
+@media(max-width:560px){.brand-mark{width:34px;height:41px}.brand-mark-small{width:34px;height:41px}.house-card{min-height:390px}.house-emblem{width:165px;height:180px}.house-card:after{top:17%;width:165px;height:165px}.detail-emblem{width:145px;height:170px}.result-icon{width:145px;height:175px}.hero-motes i:nth-child(n+7){display:none}}
+@media(prefers-reduced-motion:reduce){.hero-stars,.hero-motes i,.quote-stars,.detail-emblem img{animation:none!important}.hero-motes i{opacity:.35}}
+
+/* Moonlit reading rooms */
+.paper-section{position:relative;isolation:isolate;background:radial-gradient(circle at 88% 14%,rgba(86,115,133,.22),transparent 35%),radial-gradient(circle at 8% 86%,rgba(116,84,93,.14),transparent 40%),#1d2b36;color:#f0eadf}
+.paper-section:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:radial-gradient(circle,#e9c985 1px,transparent 1.6px);background-size:127px 151px;background-position:22px 39px;mask-image:linear-gradient(135deg,#000,transparent 82%)}
+.paper-section .eyebrow,.paper-section .eyebrow.dark,.explore-page-content .eyebrow{color:#e8c985}
+.paper-section .section-heading p,.paper-section .welcome-copy p,.paper-section .story-grid p,.paper-section .feature-grid p,.paper-section .detail-grid p{color:#cdd2d1;opacity:1}
+.paper-section .inline-link,.map-section .inline-link{color:#efd49a;border-color:#c5a867}
+.paper-section .inline-link:hover,.map-section .inline-link:hover{color:#fff1c8}
+.welcome-copy h2 em{color:#e3c381}
+.feature-grid>div{border-color:rgba(219,190,131,.48)}
+.feature-grid svg{color:#e8c985}
+.detail-facts>div{border-color:rgba(220,201,158,.26)}
+.detail-facts span{color:#d5bc85}
+.spell-search{color:#e6cb92;border-color:rgba(218,190,128,.65)}
+.spell-search input{color:#f0eadf}
+.spell-search input::placeholder,.spell-results{color:#b9c1c2}
+.spell-categories button{border-color:rgba(224,204,169,.3);color:#e2ddcf}
+.spell-categories button.selected,.spell-categories button:hover{background:#d1b574;border-color:#d1b574;color:#15202a}
+.spell-card{background:#273744;border-color:rgba(225,203,159,.32);color:#f0eadf}
+.spell-card:hover,.spell-card.cast{background:#344655;border-color:#e0c789}
+.spell-card-top,.spell-cast{color:#e2c686}
+.spell-purpose{color:#cbd2cf}
+
+/* An enchanted field map drawn over the old grounds */
+.map-section{position:relative;overflow:hidden;background:radial-gradient(circle at 74% 24%,rgba(100,75,98,.31),transparent 40%),radial-gradient(circle at 9% 90%,rgba(165,119,66,.1),transparent 35%),#211f2c;color:#f0eadf}
+.map-section:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,#f3d58b 1px,transparent 1.5px);background-size:101px 113px;opacity:.14}
+.map-layout{position:relative;grid-template-columns:30% minmax(0,1fr);gap:clamp(35px,5vw,72px)}
+.map-layout p{color:#cbcbd0}
+.map-layout .eyebrow.dark{color:#e8c985}
+.map-panel{min-width:0;padding:11px;background:#a28b70;border:1px solid #d8bb82;box-shadow:0 0 0 7px rgba(211,174,115,.08),0 24px 80px rgba(0,0,0,.38),0 0 55px rgba(198,156,85,.13);transform:rotate(.35deg)}
+.map-panel-heading,.map-panel-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:11px 15px;background:#2a2830;color:#e8d6ae;font-size:10px;letter-spacing:.16em;font-weight:700}
+.map-panel-heading span:last-child{opacity:.6}
+.map-scroll{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:#92734b #d6c6a3}
+.castle-map{width:100%;height:auto;aspect-ratio:3/2;position:relative;overflow:hidden;border:0;background:#d6c6a3}
+.castle-map:before{inset:13px;border:1px solid rgba(86,69,45,.44);z-index:2;pointer-events:none}
+.castle-map:after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 52px 19px rgba(94,65,45,.25);z-index:2}
+.map-illustration{display:block;width:100%;height:100%}
+.map-ink-labels text,.map-compass text{fill:#6b5945;font:600 12px Georgia,serif;letter-spacing:2px}
+.map-ink-labels text{opacity:.83}
+.map-compass text{font-size:15px;letter-spacing:0}
+.map-marker{min-height:44px;position:absolute;z-index:3;display:inline-flex;align-items:center;gap:6px;justify-content:center;transform:translate(-50%,-50%);border:1px solid #725b3b;border-radius:3px;background:rgba(38,43,43,.93);color:#faedca;padding:5px 9px;white-space:nowrap;font:600 12px Georgia,serif;box-shadow:0 3px 12px rgba(42,29,20,.37);transition:background .2s,box-shadow .2s,scale .2s}
+.map-marker:hover,.map-marker.selected{background:#6a493e;color:#fff5d6;transform:translate(-50%,-50%);scale:1.05;box-shadow:0 0 0 3px rgba(238,207,135,.44),0 0 21px rgba(248,213,139,.7)}
+.map-pin{color:#f1cf7d;font-size:17px;line-height:1}
+.enchanted-route{filter:drop-shadow(0 0 7px #f4d994);animation:map-trail 12s linear infinite}
+.route-origin,.route-destination{filter:drop-shadow(0 0 8px #f4d994)}
+.route-destination{animation:map-destination 2.5s ease-in-out infinite}
+@keyframes map-trail{to{stroke-dashoffset:-140}}
+@keyframes map-destination{50%{opacity:.45;r:13}}
+.map-panel-bottom{align-items:center;min-height:70px}
+.map-note{position:static;display:flex;align-items:center;gap:12px;margin:0;padding:0;border:0;background:transparent;color:#e5dfd1;font-size:12px;letter-spacing:0;font-weight:400}
+.map-note>span:last-child{display:flex;flex-direction:column;gap:3px;line-height:1.4}
+.map-note strong{display:block;color:#f5d991;font-family:Georgia,serif;font-size:16px;font-weight:400}
+.map-note-icon{color:#f3d58b;font-size:22px;animation:map-sparkle 3s ease-in-out infinite}
+@keyframes map-sparkle{50%{opacity:.55;transform:rotate(45deg) scale(.8)}}
+.map-mobile-hint{display:none;white-space:nowrap;opacity:.65;font-size:9px}
+@media(max-width:800px){.map-layout{grid-template-columns:1fr;gap:40px}.map-layout>div:first-child{max-width:620px}.map-panel{width:100%}.castle-map{min-width:720px}.map-mobile-hint{display:block}}
+@media(max-width:560px){.map-panel{padding:7px}.map-panel-heading{font-size:8px;padding:10px}.map-panel-heading span:last-child{display:none}.castle-map{min-width:650px}.map-panel-bottom{display:block;padding:12px}.map-note{font-size:11px}.map-mobile-hint{margin:8px 0 0 35px}.map-marker{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.enchanted-route,.route-destination,.map-note-icon{animation:none!important}}

@@ -20,6 +20,8 @@ Next.js 16 App Router, React 19, TypeScript in strict mode, Tailwind CSS 4, Moti
 
 ![Mobile home page](docs/screenshots/home-mobile.png)
 
+![House crests on desktop](docs/screenshots/houses-desktop.png)
+
 ## Interactive experiences
 
 The discovery quiz scores five original questions in React state and selects the house with the highest score. Ties resolve in a stable order. The spellbook filters local data instantly; each spell triggers a small, nonblocking stage effect. Location cards open detail dialogs with Escape handling, focus containment, body scroll locking, and focus restoration.
@@ -96,4 +98,4 @@ Add your repository URL here after publishing.
 
 ## Disclaimer
 
-Unofficial fan-made frontend project created for educational and portfolio purposes. Harry Potter and related properties belong to their respective rights holders.
+The site footer displays © 2026 Hogwarts Interactive Journey and updates the year automatically in the browser.

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "@/components/static-link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
@@ -15,7 +16,7 @@ const links = [
 ];
 
 export function Crest({ small = false }: { small?: boolean }) {
-  return <span className={`brand-mark ${small ? "brand-mark-small" : ""}`} aria-hidden="true"><span className="brand-mark-inner">H</span></span>;
+  return <span className={`brand-mark ${small ? "brand-mark-small" : ""}`} aria-hidden="true"><Image src="/images/crests/hogwarts.png" alt="" width={44} height={52} /></span>;
 }
 
 export function Header() {
@@ -73,7 +74,14 @@ export function Header() {
 }
 
 export function Footer() {
-  return <footer className="footer"><div className="container footer-main"><div><Link href="/" className="brand"><Crest /><span>HOGWARTS<small>AN INTERACTIVE JOURNEY</small></span></Link><p>A place for curiosity, courage, and every path between.</p></div><nav aria-label="Footer navigation">{links.map(link => <Link key={link.href} href={link.href}>{link.label}</Link>)}</nav></div><div className="container footer-bottom"><p>Unofficial fan-made frontend project created for educational and portfolio purposes. Harry Potter and related properties belong to their respective rights holders.</p><a href="#top">Back to top ↑</a></div></footer>;
+  const [year, setYear] = useState(2026);
+  useEffect(() => {
+    const refreshYear = () => setYear(new Date().getFullYear());
+    refreshYear();
+    const timer = window.setInterval(refreshYear, 60 * 60 * 1000);
+    return () => window.clearInterval(timer);
+  }, []);
+  return <footer className="footer"><div className="container footer-main"><div><Link href="/" className="brand"><Crest /><span>HOGWARTS<small>AN INTERACTIVE JOURNEY</small></span></Link><p>A place for curiosity, courage, and every path between.</p></div><nav aria-label="Footer navigation">{links.map(link => <Link key={link.href} href={link.href}>{link.label}</Link>)}</nav></div><div className="container footer-bottom"><p>© {year} Hogwarts Interactive Journey.</p><a href="#top">Back to top ↑</a></div></footer>;
 }
 
 export function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {
